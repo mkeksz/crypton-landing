@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ htmlWebpackPlugin.options.title }}</title>
+</head>
+<body>
+    {{> partials/navbar.hbs}}
+    {{#> partials/wrapper.hbs }}
+        <img src="../images/image-block-1.png" alt="test" style="width: 700px">
+    {{/ partials/wrapper.hbs}}
+</body>
+</html>

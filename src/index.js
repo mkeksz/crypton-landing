@@ -1,3 +1,1 @@
-import './style/style.sass'
-
-console.log('test')
+import './style/main.sass'

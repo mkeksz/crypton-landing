@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const globImporter = require('node-sass-glob-importer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = (_, options) => {
@@ -8,7 +9,7 @@ module.exports = (_, options) => {
         output: {
             filename: isDev ? 'bundle.js' : 'bundle.[contenthash].js',
             path: __dirname + '/dist',
-            clean: true,
+            clean: !isDev,
             assetModuleFilename: `assets/${isDev ? '[name]' : '[contenthash]'}[ext]`
         },
         devtool: isDev && 'inline-source-map',
@@ -16,23 +17,43 @@ module.exports = (_, options) => {
             rules: [
                 {
                     test: /\.(sass|scss|css)$/i,
-                    use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                    use: [
+                        isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sassOptions: {
+                                    importer: globImporter()
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     test: /\.(png|svg|jpg|jpeg|gif|eot|ttf|woff)$/i,
                     type: 'asset/resource'
                 },
+                // {
+                //     test: /\.html$/,
+                //     use: ['html-loader']
+                // },
                 {
-                    test: /\.html$/,
-                    use: ['html-loader']
+                    test: /\.hbs$/,
+                    loader: 'handlebars-loader',
+                    exclude: /(node_modules)/
                 }
             ]
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: __dirname + '/src/templates/index.html',
-                inject: 'body',
+                template: __dirname + '/public/templates/index.hbs',
+                inject: true,
+                meta: {
+                    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+                },
                 filename: 'index.html',
+                title: 'Crypton Academy',
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true
@@ -44,6 +65,11 @@ module.exports = (_, options) => {
         ],
         watchOptions: {
             ignored: ['/node_modules/', '/dist/']
+        },
+        target: 'web',
+        devServer: {
+            watchFiles: __dirname + '/public/templates',
+            liveReload: true
         }
     }
 
