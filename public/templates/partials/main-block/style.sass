@@ -9,6 +9,35 @@
     right: 0
     top: 0
     z-index: 0
+  >.glass-block
+    position: absolute
+    right: 78px
+    z-index: 1
+    width: 327px
+    >div
+      display: grid
+      grid-template-columns: 53px auto
+      grid-gap: 14px
+      >div:first-child
+        display: flex
+        place-items: center
+        >img
+          border-radius: 10px
+      >div:last-child
+        font-size: 17px
+        line-height: 135%
+        >div
+          position: relative
+          >span:first-child
+            font-weight: 600
+          >span:last-child
+            font-size: 13px
+            opacity: .3
+            letter-spacing: 0.03em
+            position: absolute
+            right: 0
+            top: 0
+
 
 .main-block__content
   z-index: 1
