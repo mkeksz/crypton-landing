@@ -31,7 +31,7 @@ module.exports = (_, options) => {
                     ]
                 },
                 {
-                    test: /\.(png|svg|jpg|jpeg|gif|eot|ttf|woff)$/i,
+                    test: /\.(png|svg|jpg|jpeg|gif|eot|ttf|woff|woff2)$/i,
                     type: 'asset/resource'
                 },
                 // {
@@ -40,7 +40,12 @@ module.exports = (_, options) => {
                 // },
                 {
                     test: /\.hbs$/,
-                    loader: 'handlebars-loader',
+                    use: {
+                        loader: 'handlebars-loader',
+                        options: {
+                            partialDirs: __dirname + '/public/templates/partials',
+                        }
+                    },
                     exclude: /(node_modules)/
                 }
             ]

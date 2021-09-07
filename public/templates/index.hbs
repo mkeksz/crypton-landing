@@ -5,9 +5,9 @@
     <title>{{ htmlWebpackPlugin.options.title }}</title>
 </head>
 <body>
-    {{> partials/navbar.hbs}}
-    {{#> partials/wrapper.hbs }}
-        <img src="../images/image-block-1.png" alt="test" style="width: 700px">
-    {{/ partials/wrapper.hbs}}
+    {{> navbar/index}}
+    {{#> wrapper/index }}
+        {{> main-block/index }}
+    {{/ wrapper/index}}
 </body>
 </html>

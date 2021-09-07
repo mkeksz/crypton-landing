@@ -1,10 +1,22 @@
 @import "vars"
+@import "fonts"
 //noinspection CssUnknownTarget
-@import "partials/*"
+@import "../../public/templates/partials/**/*.sass"
 
 *
   padding: 0
   margin: 0
+  box-sizing: border-box
 
 body
-  background: $colorMain
+  font-family: "Suisse Intl", sans-serif
+  font-weight: 400
+  color: #000
+  background: #fff
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  color: #000
