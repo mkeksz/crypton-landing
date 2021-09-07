@@ -34,19 +34,18 @@ module.exports = (_, options) => {
                     test: /\.(png|svg|jpg|jpeg|gif|eot|ttf|woff|woff2)$/i,
                     type: 'asset/resource'
                 },
-                // {
-                //     test: /\.html$/,
-                //     use: ['html-loader']
-                // },
                 {
                     test: /\.hbs$/,
-                    use: {
-                        loader: 'handlebars-loader',
-                        options: {
-                            partialDirs: __dirname + '/public/templates/partials',
+                    use: [
+                        {
+                            loader: 'handlebars-loader',
+                            options: {
+                                partialDirs: __dirname + '/public/templates/partials',
+                                inlineRequires: /(images\/)/,
+                                exclude: /(node_modules)/
+                            }
                         }
-                    },
-                    exclude: /(node_modules)/
+                    ]
                 }
             ]
         },
