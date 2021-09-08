@@ -41,3 +41,79 @@
 
 .main-block__content
   z-index: 1
+
+@media (max-width: $widthLaptopL)
+  .main-block
+    height: 790px
+    >img
+      width: 900px
+      height: 788px
+      top: 35px
+      right: -20px
+
+@media (max-width: $widthLaptopM)
+  .main-block
+    >img
+      width: 800px
+      height: 701px
+      top: 60px
+      right: -60px
+    >.glass-block
+      margin-top: 200px
+
+@media (max-width: $widthTabletL)
+  .main-block
+    height: 690px
+    >img
+      width: 700px
+      height: 613px
+      top: 60px
+      right: -80px
+    >.glass-block
+      right: 10px
+      margin-top: 250px
+
+@media (max-width: $widthTabletM)
+  .main-block
+    height: 540px
+    >img
+      width: 600px
+      height: 526px
+      top: 30px
+      right: -100px
+
+@media (max-width: $widthTabletS)
+  .main-block
+    height: 770px
+    place-items: initial
+    >img
+      top: 250px
+      right: 50px
+    >.glass-block
+      right: 10px
+      margin-top: 500px
+
+  .main-block__content
+    margin-top: 80px
+
+@media (max-width: $widthMobileB)
+  .main-block
+    >img
+      right: -20px
+
+@media (max-width: $widthMobileL)
+  .main-block
+    height: 730px
+    >img
+      top: 300px
+      right: 10px
+      width: 500px
+      height: 438px
+
+@media (max-width: $widthMobileM)
+  .main-block
+    >img
+      right: -40px
+    >.glass-block
+      right: 0
+      left: 0
