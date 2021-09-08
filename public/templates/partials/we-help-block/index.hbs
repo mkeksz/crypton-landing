@@ -1,0 +1,36 @@
+<div class="we-help-block">
+    {{#> wrapper/index}}
+        <div class="we-help-block__content">
+            {{> tag-block/index text="подписка crypton academy" }}
+            {{> space/index height=31 }}
+            {{#> big-text/index lineHeight="105%" }}
+                Помогаем<br>зарабатывать<br>на криптовалюте.
+            {{/big-text/index}}
+            {{> space/index height=41 }}
+            {{#> accent-text/index }}
+                <span class="gray">
+                    Мы собрали в одной подписке всё необходимое, чтобы новички смогли получать качественный опыт и
+                    начать зарабатывать самостоятельно, а профессионалы поднимать свои доходы ещё выше.
+                    В подписку входят:
+                </span>
+                <br>
+                <b>календарь событий, личный помощник,<br>чат единомышленников, закрытый канал,<br>база знаний, инвест фонд, QA-сессии.</b>
+                <br>
+                <span class="gray">И чуточку волшебства.</span>
+            {{/accent-text/index}}
+        </div>
+        <div class="we-help-block__msgs">
+            <div class="we-help-block__msg-1">
+                {{> message-block/index isRight=true emoji="../../../images/emoji-1.png" text="«Легко зарабатывать сразу! Обожаю вас!»" name="Максим Петров" tag="Новичок"}}
+            </div>
+            <div class="we-help-block__msg-2">
+                {{> message-block/index text="«Теперь многие задачи решаются за меня экспертами! Я даже не мечтал о таком! Это нечто!»" name="Александр Мельник" tag="Профи с опытом"}}
+            </div>
+        </div>
+    {{/wrapper/index}}
+    <div class="we-help-block__img">
+        {{#> wrapper/index}}
+            <img src="../../../images/we-help-block.png" alt="">
+        {{/wrapper/index}}
+    </div>
+</div>

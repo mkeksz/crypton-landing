@@ -1,0 +1,18 @@
+<div class="message-block {{#if isRight}}message-block_right{{else}}message-block_left{{/if}}">
+    {{#if emoji}}
+        <div class="message-block__emoji"><img src="{{emoji}}" alt=""></div>
+    {{/if}}
+    <div class="message-block__text">
+        {{text}}
+    </div>
+    <div class="message-block__bottom">
+        <div class="message-block__name">
+            {{#if name}}
+                {{name}}
+            {{/if}}
+        </div>
+        <div class="message-block__tag">
+            {{tag}}
+        </div>
+    </div>
+</div>
