@@ -19,14 +19,10 @@
                 <span class="gray">И чуточку волшебства.</span>
             {{/accent-text/index}}
         </div>
-        <div class="we-help-block__msgs">
-            <div class="we-help-block__msg-1">
-                {{> message-block/index isRight=true emoji="../../../images/emoji-1.png" text="«Легко зарабатывать сразу! Обожаю вас!»" name="Максим Петров" tag="Новичок"}}
-            </div>
-            <div class="we-help-block__msg-2">
-                {{> message-block/index text="«Теперь многие задачи решаются за меня экспертами! Я даже не мечтал о таком! Это нечто!»" name="Александр Мельник" tag="Профи с опытом"}}
-            </div>
-        </div>
+        {{#> dialogue/index}}
+            <div class="right">{{> message-block/index isRight=true emoji="../../../images/emoji-1.png" text="«Легко зарабатывать сразу! Обожаю вас!»" name="Максим Петров" tag="Новичок"}}</div>
+            <div>{{> message-block/index text="«Теперь многие задачи решаются за меня экспертами! Я даже не мечтал о таком! Это нечто!»" name="Александр Мельник" tag="Профи с опытом"}}</div>
+        {{/dialogue/index}}
     {{/wrapper/index}}
     <div class="we-help-block__img">
         {{#> wrapper/index}}

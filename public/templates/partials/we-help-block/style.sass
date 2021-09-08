@@ -1,5 +1,3 @@
-$heightMsgBlock: 220px
-
 .we-help-block
   margin-top: 20px
   position: relative
@@ -13,45 +11,10 @@ $heightMsgBlock: 220px
   display: flex
   place-content: center
   background: linear-gradient(180deg, #FFFFFF 0%, #F7F7FA 100%)
-
-.we-help-block__msg-1
-  position: absolute
-  right: 130px
-  z-index: 2
-  top: 160px
-
-.we-help-block__msg-2
-  position: absolute
-  right: 175px
-  z-index: 2
-  top: 160px + $heightMsgBlock + 58px
-
-@media (max-width: $widthLaptopB)
-  .we-help-block__msg-1
-    right: 70px
-  .we-help-block__msg-2
-    right: 115px
-
-@media (max-width: $widthLaptopL)
-  .we-help-block__msg-1
-    display: flex
-    place-content: center
-    margin-left: 45px
-    position: initial
-    top: initial
-    right: initial
-
-  .we-help-block__msg-2
-    margin-top: 58px
-    display: flex
-    place-content: center
-    position: initial
-    top: initial
-    right: initial
-
-  .we-help-block__msgs
-    margin-top: 60px
-    position: relative
+  >.wrapper
+    >div
+      display: flex
+      place-items: end
 
 @media (max-width: $widthLaptopM)
   .we-help-block__img
@@ -72,19 +35,12 @@ $heightMsgBlock: 220px
     >.big-text
       font-size: 56px
 
-  .we-help-block__msg-2
-    margin-top: 28px
-
 @media (max-width: $widthMobileL)
   .we-help-block__content
-    >.accent-text
-      font-size: 17px
     >.big-text
       font-size: 50px
 
 @media (max-width: $widthMobileM)
   .we-help-block__content
-    >.accent-text
-      font-size: 15px
     >.big-text
       font-size: 42px

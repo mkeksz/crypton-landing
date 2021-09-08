@@ -1,0 +1,41 @@
+$distanceDialogue: 45px
+
+.dialogue
+  >div
+    position: absolute
+    z-index: 2
+    right: 175px
+    &:first-child
+      top: 160px
+    &:last-child
+      top: 160px + 220px + 58px
+    &.right
+      right: 130px
+
+@media (max-width: $widthLaptopB)
+  .dialogue
+    >div
+      right: 115px
+      &.right
+        right: 70px
+
+@media (max-width: $widthLaptopL)
+  .dialogue
+    margin-top: 60px
+    position: relative
+    >div
+      display: flex
+      position: initial
+      top: initial
+      right: initial
+      place-content: center
+      &.right
+        margin-left: 45px
+      &:last-child
+        margin-top: 58px
+
+
+@media (max-width: $widthMobileB)
+  .dialogue
+    >div:last-child
+      margin-top: 28px
