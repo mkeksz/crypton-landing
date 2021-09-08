@@ -7,7 +7,7 @@ module.exports = (_, options) => {
     return {
         entry: './src/index.js',
         output: {
-            filename: isDev ? 'bundle.js' : 'bundle.[contenthash].js',
+            filename: isDev ? 'bundle.js' : '[contenthash].js',
             path: __dirname + '/dist',
             clean: !isDev,
             assetModuleFilename: `assets/${isDev ? '[name]' : '[contenthash]'}[ext]`
@@ -63,9 +63,7 @@ module.exports = (_, options) => {
                     collapseWhitespace: true
                 }
             }),
-            new MiniCssExtractPlugin({
-                filename: 'bundle.[id].[hash].css',
-            })
+            new MiniCssExtractPlugin({filename: '[contenthash].css',})
         ],
         watchOptions: {
             ignored: ['/node_modules/', '/dist/']
