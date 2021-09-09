@@ -1,0 +1,40 @@
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const list = $('.reviews__list').slick({arrows: false, fade: true, speed: 300})
+        $('.reviews__list [data-slick-controller="left"]').on('click', () => list.slick('slickPrev'))
+        $('.reviews__list [data-slick-controller="right"]').on('click', () => list.slick('slickNext'))
+    })
+</script>
+<div class="reviews">
+    <h2>
+        Отзывы участников
+        <br>
+        Crypton Academy.
+    </h2>
+    <div class="reviews__list">
+        <div>
+            {{> review/index
+                    userAvatar="../../../images/user-avatar.png"
+                    userName="Михаил Павлов"
+                    userTag="Новичок"
+                    text="«It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' wil»."
+            }}
+        </div>
+        <div>
+            {{> review/index
+                    userAvatar="../../../images/user-avatar.png"
+                    userName="Андрей Павлов"
+                    userTag="Профи"
+                    text="«Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' wil»."
+            }}
+        </div>
+        <div>
+            {{> review/index
+                    userAvatar="../../../images/user-avatar.png"
+                    userName="Никита Павлов"
+                    userTag="Бывалый"
+                    text="«It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' wil»."
+            }}
+        </div>
+    </div>
+</div>
