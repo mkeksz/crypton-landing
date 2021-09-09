@@ -1,0 +1,50 @@
+.feature
+  //height: 500px
+  display: grid
+  grid-template-areas: 't i'
+  place-items: center
+  &_right
+    grid-template-areas: 'i t'
+
+.feature__image
+  grid-area: i
+
+.feature__text
+  grid-area: t
+  max-width: 284px
+  >h6
+    font-weight: 600
+    font-size: 28px
+    line-height: 32px
+    max-width: 270px
+  >p
+    margin-top: 18px
+    font-size: 22px
+    line-height: 140%
+    color: #86868B
+
+@media (max-width: $widthTabletL)
+  .feature
+    grid-template-columns: 1fr 1fr
+
+  .feature__image
+    >img
+      width: 100%
+
+@media (max-width: $widthTabletM)
+  .feature
+    grid-gap: 20px
+
+@media (max-width: $widthTabletS)
+  .feature
+    grid-gap: 10px
+    grid-template-areas: 'i' 't'
+    grid-template-columns: 1fr
+  .feature__image
+    max-width: 225px
+  .feature__text
+    max-width: 100%
+    >h6
+      max-width: 100%
+
+
