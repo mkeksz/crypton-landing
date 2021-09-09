@@ -1,3 +1,5 @@
-<a class="main-button" {{#if url}}href="{{url}}"{{/if}}>
-    {{ text }}
-</a>
+{{#if url }}
+    <a class="main-button" href="{{url}}">{{text}}</a>
+{{else}}
+    <button class="main-button" {{#if isSubmit}}type="submit"{{/if}}>{{text}}</button>
+{{/if}}
