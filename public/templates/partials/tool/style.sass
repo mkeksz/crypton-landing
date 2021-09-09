@@ -1,0 +1,49 @@
+.tool
+  position: relative
+  //margin-top: 140px
+  //margin-bottom: 310px
+
+.tool__content
+  padding-top: 140px
+  padding-bottom: 170px
+  max-width: 396px
+  z-index: 1
+  >.big-text
+    font-size: 40px
+  >.main-button
+    height: 40px
+
+.tool__img
+  position: absolute
+  right: -160px
+  top: 0
+  bottom: 0
+  display: flex
+  place-items: center
+  z-index: -1
+
+@media (max-width: $widthLaptopB)
+  .tool__img
+    right: -150px
+
+@media (max-width: $widthLaptopL)
+  .tool__content
+    padding-top: 70px
+    padding-bottom: 0
+    max-width: initial
+  .tool__img
+    position: initial
+    place-content: center
+    margin-top: 40px
+
+@media (max-width: $widthTabletL)
+  .tool__img
+    >img
+      width: 100%
+
+@media (max-width: $widthMobileB)
+  .tool__content
+    >.big-text
+      font-size: 34px
+    >.accent-text
+      font-size: 22px

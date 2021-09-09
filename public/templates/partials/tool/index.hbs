@@ -1,0 +1,18 @@
+<div class="tool">
+    <div class="tool__content">
+        {{> tag-block/index text=tagText color=tagColor}}
+        {{> space/index height=24 }}
+        {{#> big-text/index lineHeight="115%" }}
+            {{bigText}}
+        {{/big-text/index}}
+        {{> space/index height=24 }}
+        {{#> accent-text/index }}
+            {{{accentText}}}
+        {{/accent-text/index}}
+        {{> space/index height=24 }}
+        {{> main-button/index text=buttonText url=buttonURL }}
+    </div>
+    <div class="tool__img" >
+        <img src="{{image}}" alt="">
+    </div>
+</div>
