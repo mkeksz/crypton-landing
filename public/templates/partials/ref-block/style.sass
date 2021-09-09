@@ -6,3 +6,34 @@
   background: linear-gradient(180deg, #FFF 0%, #F7F7FA 100%)
   display: flex
   place-content: center
+
+@media (max-width: $widthLaptopB)
+  .ref-block__image-container
+    >img
+      width: 100%
+
+@media (max-width: $widthTabletL)
+  .ref-block__content
+    >.big-text
+      font-size: 46px
+    >.accent-text
+      font-size: 22px
+
+@media (max-width: $widthMobileB)
+  .ref-block__content
+    >.big-text
+      font-size: 40px
+  .ref-block__image-container
+    display: flex
+    place-content: center
+    place-items: center
+    >img
+      width: 700px
+
+@media (max-width: $widthMobileM)
+  .ref-block__content
+    >.big-text
+      font-size: 32px
+  .ref-block__image-container
+    >img
+      width: 600px

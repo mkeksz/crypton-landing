@@ -19,6 +19,10 @@
         </div>
     {{/wrapper/index}}
     <div class="ref-block__image">
-        <img src="../../../images/ref-block.png" alt="">
+        {{#> wrapper/index}}
+            <div class="ref-block__image-container">
+                <img src="../../../images/ref-block.png" alt="">
+            </div>
+        {{/wrapper/index}}
     </div>
 </div>
