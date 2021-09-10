@@ -9,34 +9,35 @@
     right: 0
     top: 0
     z-index: 0
-  >.glass-block
-    position: absolute
-    right: 78px
-    z-index: 1
-    width: 327px
-    >div
-      display: grid
-      grid-template-columns: 53px auto
-      grid-gap: 14px
-      >div:first-child
-        display: flex
-        place-items: center
-        >img
-          border-radius: 10px
-      >div:last-child
-        font-size: 17px
-        line-height: 135%
-        >div
-          position: relative
-          >span:first-child
-            font-weight: 600
-          >span:last-child
-            font-size: 13px
-            opacity: .3
-            letter-spacing: 0.03em
-            position: absolute
-            right: 0
-            top: 0
+
+.main-block__tg
+  position: absolute
+  right: 78px
+  z-index: 1
+  &-content
+    width: 297px
+    display: grid
+    grid-template-columns: 53px auto
+    grid-gap: 14px
+    >div:first-child
+      display: flex
+      place-items: center
+      >img
+        border-radius: 10px
+    >div:last-child
+      font-size: 17px
+      line-height: 135%
+      >div
+        position: relative
+        >span:first-child
+          font-weight: 600
+        >span:last-child
+          font-size: 13px
+          opacity: .3
+          letter-spacing: 0.03em
+          position: absolute
+          right: 0
+          top: 0
 
 
 .main-block__content
@@ -58,8 +59,8 @@
       height: 701px
       top: 60px
       right: -60px
-    >.glass-block
-      margin-top: 200px
+  .main-block__tg
+    margin-top: 200px
 
 @media (max-width: $widthTabletL)
   .main-block
@@ -69,9 +70,9 @@
       height: 613px
       top: 60px
       right: -80px
-    >.glass-block
-      right: 10px
-      margin-top: 250px
+  .main-block__tg
+    right: 10px
+    margin-top: 250px
 
 @media (max-width: $widthTabletM)
   .main-block
@@ -89,9 +90,9 @@
     >img
       top: 250px
       right: 50px
-    >.glass-block
-      right: 10px
-      margin-top: 500px
+  .main-block__tg
+    right: 10px
+    margin-top: 500px
 
   .main-block__content
     margin-top: 80px
@@ -114,6 +115,6 @@
   .main-block
     >img
       right: -40px
-    >.glass-block
-      right: 0
-      left: 0
+  .main-block__tg
+    right: 0
+    left: 0

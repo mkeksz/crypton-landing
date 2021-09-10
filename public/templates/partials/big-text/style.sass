@@ -1,3 +1,62 @@
 .big-text
   font-weight: 600
   letter-spacing: -0.02em
+  line-height: 115%
+  &_verybig
+    font-size: 86px
+  &_big
+    font-size: 76px
+  &_large
+    font-size: 64px
+  &_medium
+    font-size: 56px
+  &_small
+    font-size: 40px
+
+@media (max-width: $widthTabletM)
+  .big-text
+    &_large
+      font-size: 58px
+
+@media (max-width: $widthTabletS)
+  .big-text
+    &_verybig
+      font-size: 78px
+    &_big
+      font-size: 66px
+    &_medium
+      font-size: 46px
+
+
+@media (max-width: $widthMobileB)
+  .big-text
+    &_verybig
+      font-size: 72px
+    &_big
+      font-size: 56px
+    &_large
+      font-size: 48px
+    &_small
+      font-size: 34px
+
+@media (max-width: $widthMobileL)
+  .big-text
+    &_big
+      font-size: 50px
+    &_large
+      font-size: 42px
+    &_medium
+      font-size: 36px
+
+@media (max-width: $widthMobileM)
+  .big-text
+    &_verybig
+      font-size: 68px
+    &_big
+      font-size: 42px
+    &_large
+      font-size: 34px
+    &_medium
+      font-size: 32px
+    &_small
+      font-size: 30px

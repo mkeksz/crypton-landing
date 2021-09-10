@@ -1,5 +1,5 @@
 {{#if url }}
-    <a class="main-button" href="{{url}}">{{text}}</a>
+    <a {{#if fontSize}}style="font-size: {{fontSize}}px"{{/if}} class="main-button {{#if fullWidth}}main-button_full-width{{/if}}" href="{{url}}">{{text}}</a>
 {{else}}
-    <button class="main-button" {{#if isSubmit}}type="submit"{{/if}}>{{text}}</button>
+    <button {{#if fontSize}}style="font-size: {{fontSize}}px"{{/if}} class="main-button {{#if fullWidth}}main-button_full-width{{/if}}" {{#if isSubmit}}type="submit"{{/if}}>{{text}}</button>
 {{/if}}

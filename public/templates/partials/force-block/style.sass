@@ -3,50 +3,22 @@
   padding-bottom: 100px
   background: linear-gradient(180deg, #FFFFFF 0%, #F7F7FA 100%)
 
-.force-block__content
-  >.big-text
-    font-size: 86px
-
 .force-block__achievements
   margin-top: 100px
-  display: flex
-  >.achievement
-    margin-right: 142px
-    &:last-child
-      margin-right: 0
+  display: grid
+  grid-gap: 140px
+  grid-template-columns: 280px 280px
 
 @media (max-width: $widthLaptopL)
   .force-block__achievements
-    place-content: space-around
-    >.achievement
-      margin-right: 0
-
-@media (max-width: $widthTabletS)
-  .force-block__content
-    >.big-text
-      font-size: 78px
+    grid-gap: 40px
+    grid-template-columns: 1fr 1fr
 
 @media (max-width: $widthMobileB)
   .force-block
     margin-top: 50px
     padding-bottom: 50px
 
-  .force-block__content
-    >.big-text
-      font-size: 72px
-    >.accent-text
-      font-size: 24px
-
   .force-block__achievements
     margin-top: 50px
-    flex-direction: column
-    place-items: center
-    >.achievement:last-child
-      margin-top: 40px
-
-@media (max-width: $widthMobileM)
-  .force-block__content
-    >.big-text
-      font-size: 68px
-    >.accent-text
-      font-size: 20px
+    grid-template-columns: 1fr

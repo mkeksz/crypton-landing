@@ -3,21 +3,23 @@
     <div class="main-block__content">
         {{> tag-block/index text="crypton academy" }}
         {{> space/index height=15 }}
-        {{#> big-text/index fontSize=40 lineHeight="120%" }}
+        {{#> big-text/index size="small"}}
             Ваш спутник<br>и навигатор<br>в мире крипты.
         {{/big-text/index}}
         {{> space/index height=24 }}
         {{> main-button/index text="Подробнее" url="#" }}
     </div>
-    {{#> glass-block/index }}
-        <div>
-            <div>
-                <img src="../../../images/telegram-icon.png" alt="">
+    <div class="main-block__tg">
+        {{#> glass-block/index }}
+            <div class="main-block__tg-content">
+                <div>
+                    <img src="../../../images/telegram-icon.png" alt="">
+                </div>
+                <div>
+                    <div><span>Crypton Academy</span><span>Сейчас</span></div>
+                    <p>Старт токен-сейла через <br>15 минут! Инструкция:</p>
+                </div>
             </div>
-            <div>
-                <div><span>Crypton Academy</span><span>Сейчас</span></div>
-                <p>Старт токен-сейла через <br>15 минут! Инструкция:</p>
-            </div>
-        </div>
-    {{/glass-block/index}}
+        {{/glass-block/index}}
+    </div>
 </div>
