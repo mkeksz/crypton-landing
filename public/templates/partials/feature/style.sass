@@ -3,6 +3,7 @@
   display: grid
   grid-template-areas: 't i'
   place-items: center
+  grid-template-rows: 508px
   &_right
     grid-template-areas: 'i t'
 
@@ -26,10 +27,12 @@
 @media (max-width: $widthTabletL)
   .feature
     grid-template-columns: 1fr 1fr
+    grid-template-rows: 300px
 
   .feature__image
+    height: 100%
     >img
-      width: 100%
+      height: 100%
 
 @media (max-width: $widthTabletM)
   .feature
@@ -40,7 +43,9 @@
     grid-gap: 10px
     grid-template-areas: 'i' 't'
     grid-template-columns: 1fr
+    grid-template-rows: unset
   .feature__image
+    height: 276px
     max-width: 225px
   .feature__text
     max-width: 100%
