@@ -1,11 +1,13 @@
 .form
-  background: #F7F7FA
-  border-radius: 40px
-  padding: 82px 65px
-  display: flex
-  max-width: 1110px
-  margin: 100px auto 0
-  place-content: space-between
+  padding: 100px 20px 0
+  >div
+    background: #F7F7FA
+    border-radius: 40px
+    padding: 82px 65px
+    display: flex
+    max-width: 1110px
+    margin: 0 auto
+    place-content: space-between
 
 .form__info
   max-width: 510px
@@ -62,20 +64,18 @@
   &-button
     margin-top: 24px
 
-@media (max-width: $widthLaptopB)
-  .form
-    margin: 100px 20px 0
-
 @media (max-width: $widthLaptopL)
   .form
-    padding: 42px 35px
+    >div
+      padding: 42px 35px
   .form__info
     margin-right: 30px
     max-width: 490px
 
 @media (max-width: $widthLaptopM)
   .form
-    flex-direction: column
+    >div
+      flex-direction: column
   .form__info
     max-width: none
     margin-right: 0
@@ -92,7 +92,8 @@
 
 @media (max-width: $widthMobileB)
   .form
-    padding: 20px
+    >div
+      padding: 20px 30px
   .form__info
     >h5
       font-size: 34px
@@ -112,8 +113,9 @@
 
 @media (max-width: $widthMobileM)
   .form
-    padding: 15px
-    margin: 50px 10px 0
+    padding-top: 60px
+    >div
+      padding: 15px
   .form__info
     >h5
       font-size: 26px
