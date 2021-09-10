@@ -1,8 +1,8 @@
 <div class="feature {{#if isRight}}feature_right{{/if}}">
     <div class="feature__image">
-        <img src="{{image}}" alt="">
+        <img src="{{image}}" alt="" class="wow {{#if isRight}}animate__backInLeft{{else}}animate__backInRight{{/if}}" data-wow-duration="1s">
     </div>
-    <div class="feature__text">
+    <div class="feature__text wow {{#if isRight}}animate__backInRight{{else}}animate__backInLeft{{/if}}" data-wow-duration="1s">
         <h6>{{title}}</h6>
         <p>{{text}}</p>
     </div>

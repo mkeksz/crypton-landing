@@ -6,12 +6,12 @@
     })
 </script>
 <div class="reviews">
-    <h2>
+    {{#> big-text/index size="medium"}}
         Отзывы участников
         <br>
         Crypton Academy.
-    </h2>
-    <div class="reviews__list">
+    {{/big-text/index}}
+    <div class="reviews__list wow animate__fadeIn" data-wow-duration="1s">
         <div>
             {{> review/index
                     userAvatar="../../../images/user-avatar.png"

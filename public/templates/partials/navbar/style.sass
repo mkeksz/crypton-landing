@@ -1,3 +1,7 @@
+$speedAnim: .3s
+$initHeight: 63px
+$scrollHeight: 43px
+
 .navbar
   background: rgba(255, 255, 255, .72)
   backdrop-filter: blur(20px)
@@ -6,16 +10,20 @@
   left: 0
   top: 0
   right: 0
-  height: 63px
+  height: $initHeight
+  max-height: $initHeight
+  transition: max-height $speedAnim
   >div
     height: 100%
 
 .navbar__container
-  height: 100%
+  height: $initHeight
+  max-height: $initHeight
   display: flex
   flex-direction: row
   place-items: center
   place-content: space-between
+  transition: max-height $speedAnim
 
 .navbar__logo
   display: flex
@@ -25,11 +33,13 @@
 .navbar__menu
   height: 100%
   display: flex
+  place-items: center
   >ul
     display: flex
     flex-direction: row
     margin-top: 25px
     height: 28px
+    transition: margin-top $speedAnim
     >li
       height: 100%
       letter-spacing: 0.02em
@@ -53,6 +63,14 @@
     &:hover
       opacity: .8
 
+.navbar_scroll
+  max-height: $scrollHeight
+  .navbar__menu
+    >ul
+      margin-top: 0
+  .navbar__container
+    max-height: $scrollHeight
+
 @media (max-width: $widthTabletL)
   .navbar__menu
     >ul
@@ -61,8 +79,10 @@
         margin-right: 16px
 
 @media (max-width: $widthTabletM)
+  .navbar__container
+    place-content: flex-end
   .navbar__menu
-    place-content: end
+    place-content: flex-end
     display: flex
     >ul
       >li
@@ -73,6 +93,8 @@
     display: none
 
 @media (max-width: $widthTabletS)
+  .navbar__container
+    place-content: space-between
   .navbar__menu
     >ul
       >.navbar__link
