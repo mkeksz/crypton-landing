@@ -46,7 +46,7 @@ $scrollHeight: 43px
       display: inline-flex
       place-items: center
       place-content: center
-      font-size: 13px
+      font-size: 14px
       margin-right: 24px
       &:last-child
         margin-right: 0
@@ -71,6 +71,12 @@ $scrollHeight: 43px
   .navbar__container
     max-height: $scrollHeight
 
+@media (max-width: $widthLaptopB)
+  .navbar__menu
+    >ul
+      >li
+        font-size: 13px
+
 @media (max-width: $widthTabletL)
   .navbar__menu
     >ul
@@ -79,26 +85,7 @@ $scrollHeight: 43px
         margin-right: 16px
 
 @media (max-width: $widthTabletM)
-  .navbar__container
-    place-content: flex-end
-  .navbar__menu
-    place-content: flex-end
-    display: flex
-    >ul
-      >li
-        font-size: 11px
-        margin-right: 14px
-
-  .navbar__logo
-    display: none
-
-@media (max-width: $widthTabletS)
-  .navbar__container
-    place-content: space-between
   .navbar__menu
     >ul
       >.navbar__link
         display: none
-
-  .navbar__logo
-    display: flex
