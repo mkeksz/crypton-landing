@@ -4,3 +4,4 @@ import 'slick-carousel'
 
 window.jQuery = $
 window.$ = $
+
