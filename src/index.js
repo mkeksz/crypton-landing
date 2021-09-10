@@ -6,6 +6,5 @@ import WOW from 'wow.js'
 
 window.jQuery = $
 window.$ = $
-// TODO указать везде фиксированный размер img чтобы картинка не съезжала
 
 new WOW().init()
