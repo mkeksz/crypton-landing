@@ -1,0 +1,50 @@
+.tool-glasses
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  >div
+    height: 100%
+    display: flex
+    place-content: center
+    place-items: center
+    >div
+      width: 220px
+      height: 220px
+      position: absolute
+
+.tool-glasses__glass
+  font-size: 17px
+  line-height: 140%
+  >b
+    display: block
+  >p
+    margin-top: 20px
+    &:first-child
+      margin-top: 0
+  >img
+    margin: 15px 0 10px
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  >span
+    display: block
+    color: #008CFF
+
+@media (max-width: $widthMobileB)
+  .tool-glasses__glass
+    font-size: 15px
+
+  .tool-glasses
+    >div
+      >div
+        width: 180px
+        height: auto
+
+@media (max-width: $widthMobileL)
+  .tool-glasses
+    >div
+      >div
+        transform: scale(.8)

@@ -16,17 +16,15 @@
   place-items: center
   z-index: -1
 
-@media (max-width: $widthLaptopB)
-  .tool__img
-    right: -150px
-
 @media (max-width: $widthLaptopL)
   .tool__content
     padding-top: 70px
     padding-bottom: 0
     max-width: initial
   .tool__img
-    position: initial
+    position: relative
+    left: 0
+    right: 0 !important
     place-content: center
     margin-top: 40px
 

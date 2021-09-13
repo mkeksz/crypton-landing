@@ -12,7 +12,8 @@
         {{> space/index height=24 }}
         {{> main-button/index text=buttonText url=buttonURL openWindowID=buttonOpenWindowID }}
     </div>
-    <div class="tool__img" >
+    <div class="tool__img" {{#if right}}style="right: {{right}}"{{/if}}>
         <img src="{{image}}" alt="" class="wow animate__fadeInRight" data-wow-duration="1s">
+        {{{@partial-block}}}
     </div>
 </div>

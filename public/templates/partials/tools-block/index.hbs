@@ -6,7 +6,7 @@
         <br>
         Crypton Academy.
     {{/big-text/index}}
-    {{> tool/index
+    {{#> tool/index
         tagText="календарь"
         tagColor="#DD0D18"
         bigText="Умный календарь событий работает за вас и экономит ваше время."
@@ -16,7 +16,9 @@
         image="../../../images/tool-1.png"
         anchor="tool-calendar"
     }}
-    {{> tool/index
+        {{> tool-glasses-calendar/index}}
+    {{/tool/index}}
+    {{#> tool/index
         tagText="помощник"
         tagColor="#FF5E00"
         bigText="Каждый участник подписки получает личного помощника."
@@ -25,8 +27,11 @@
         accentText="Опытный помощник быстро ответит на ваше сообщение и решит все проблемы в мире крипты. От зависшей транзакции, до вывода денег и покупки первой криптовалюты."
         image="../../../images/tool-2.png"
         anchor="tool-helper"
+        right="-50px"
     }}
-    {{> tool/index
+        {{>tool-glasses-helper/index}}
+    {{/tool/index}}
+    {{#> tool/index
         tagText="чат"
         tagColor="#53DE5D"
         bigText="Увлекательный чат единомышленников и карьерный рост."
@@ -35,8 +40,11 @@
         accentText="В чате более 650 человек, которые готовы инвестировать в своё развитие и стремятся зарабатывать больше. За активную деятельность есть возможность попасть в команду Crypton и получить работу мечты."
         image="../../../images/tool-3.png"
         anchor="tool-chat"
+        right="-50px"
     }}
-    {{> tool/index
+        {{>tool-glasses-chat/index}}
+    {{/tool/index}}
+    {{#> tool/index
         tagText="канал"
         tagColor="#30B3EB"
         bigText="Закрытый Telegram канал Crypton Academy."
@@ -45,8 +53,11 @@
         accentText="В канале публикуются разборы и аналитика перспективных проектов, новые и интересные токен и NFT сейлы, в которых стоит принять участие, выгодные фарминги и стейкинги в DeFi секторе."
         image="../../../images/tool-4.png"
         anchor="tool-tg"
+        right="-50px"
     }}
-    {{> tool/index
+        {{> tool-glasses-channel/index}}
+    {{/tool/index}}
+    {{#> tool/index
         tagText="база знаний"
         tagColor="#F3BA2F"
         bigText="Огромная и уникальная база знаний."
@@ -55,8 +66,11 @@
         accentText="Изучайте различные криптовалюты и блокчейны, получайте подробные туториалы и гайды по биржам, узнавайте как работают DeFi проекты и какую пользу они могут вам дать."
         image="../../../images/tool-5.png"
         anchor="tool-book"
+        right="-150px"
     }}
-    {{> tool/index
+        {{> tool-glasses-book/index}}
+    {{/tool/index}}
+    {{#> tool/index
         tagText="инвест фонд"
         tagColor="#7553ED"
         bigText="Crypton Academy инвестирует за вас."
@@ -65,8 +79,11 @@
         accentText="10% от всех средств, которыми вы оплачиваете подписку Crypton Academy, отправляются в инвестиционный фонд и закрепляются лично за вашим аккаунтом."
         image="../../../images/tool-6.png"
         anchor="tool-invest"
+        right="0"
     }}
-    {{> tool/index
+        {{> tool-glasses-invest/index}}
+    {{/tool/index}}
+    {{#> tool/index
         tagText="АМА-сессии"
         bigText="Раз в 2 недели."
         buttonText="Начать"
@@ -74,5 +91,8 @@
         accentText="AMA-сессии  (вопрос ответ) проходят с Павлом Сычевым, создателем Crypton, автором блога TradeParty и YouTube канала EnjoyMaloy. Павел ответит на вопросы каждого участника академии и даст свои рекомендации в той или иной ситуации."
         image="../../../images/tool-7.png"
         anchor="tool-ama"
+        right="-110px"
     }}
+        {{> tool-glasses-ama/index}}
+    {{/tool/index}}
 </div>
