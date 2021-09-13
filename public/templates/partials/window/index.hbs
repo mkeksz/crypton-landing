@@ -2,8 +2,13 @@
     {{#> wrapper/index fullHeight=true}}
         <div class="window__container">
             <div class="window__panel">
-                <div class="window__logo">
-                    {{> logo/index}}
+                <div class="window__panel-left">
+                    <div class="window__logo">
+                        {{> logo/index}}
+                    </div>
+                    <div class="window__tag" {{#if tagColor}}style="color: {{tagColor}}"{{/if}}>
+                        {{tag}}
+                    </div>
                 </div>
                 <div class="window__close">
                     <div class="window__close-button">
