@@ -1,0 +1,19 @@
+<div class="window" data-window-id="{{windowID}}" {{#if backgroundColor}}style="background-color: {{backgroundColor}}" {{/if}}>
+    {{#> wrapper/index fullHeight=true}}
+        <div class="window__container">
+            <div class="window__panel">
+                <div class="window__logo">
+                    {{> logo/index}}
+                </div>
+                <div class="window__close">
+                    <div class="window__close-button">
+                        {{> main-button/index fontSize=13 isBlack=true notAnimate=true text="Закрыть" closeWindowID=windowID}}
+                    </div>
+                </div>
+            </div>
+            <div class="window__content">
+                {{> @partial-block }}
+            </div>
+        </div>
+    {{/wrapper/index}}
+</div>

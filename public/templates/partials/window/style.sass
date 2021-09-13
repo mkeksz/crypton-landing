@@ -1,0 +1,39 @@
+.window
+  position: fixed
+  top: 0
+  height: 100vh
+  width: 100vw
+  background-color: #fff
+  z-index: 10000
+  opacity: 0
+  visibility: hidden
+  transform: scale(.5)
+  transition: opacity .3s, visibility .3s, transform .3s
+  &.show
+    visibility: visible
+    opacity: 1
+    transform: scale(1)
+
+.window__container
+  overflow-y: auto
+  height: 100%
+  display: grid
+  grid-template-rows: 55px auto
+
+.window__panel
+  display: flex
+  place-content: space-between
+  place-items: center
+  padding-top: 17px
+
+.window__close
+  padding-top: 10px
+  &-button
+    width: 78px
+    height: 28px
+
+.window__content
+  padding: 15px 0 40px
+  display: flex
+  place-content: center
+  place-items: center

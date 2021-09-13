@@ -1,5 +1,5 @@
-<div class="form" id="form">
-    <div class="wow animate__fadeInRight" data-wow-duration="1s">
+<div class="form {{#if inWindow}}form_in-window{{/if}}" id="form">
+    <div {{#if inWindow}}{{else}}class="wow animate__fadeInRight" data-wow-duration="1s"{{/if}}>
         <div class="form__info">
             <h5>Оформите единую подписку.</h5>
             <p class="form__info-price">Всего за 49$ в месяц или 459$ в год.</p>
@@ -17,7 +17,7 @@
                 <label><input name="name" type="text" placeholder="Имя"></label>
                 <label><input name="phone" type="tel" placeholder="Телефон"></label>
                 <div class="form__help-button">
-                    {{> main-button/index fullWidth=true text="Получить помощь" isSubmit=true}}
+                    {{> main-button/index fullWidth=true text="Получить помощь" isSubmit=true notAnimate=inWindow}}
                 </div>
             </form>
         </div>
