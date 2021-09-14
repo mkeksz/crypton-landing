@@ -37,7 +37,7 @@ $scrollHeight: 43px
   >ul
     display: flex
     flex-direction: row
-    margin-top: 25px
+    margin-top: 13px
     height: 28px
     transition: margin-top $speedAnim
     >li
@@ -63,6 +63,10 @@ $scrollHeight: 43px
     &:hover
       opacity: .8
 
+.navbar__logo
+  >.logo>span
+    transition: padding-top .2s
+
 .navbar_scroll
   max-height: $scrollHeight
   .navbar__menu
@@ -70,6 +74,10 @@ $scrollHeight: 43px
       margin-top: 0
   .navbar__container
     max-height: $scrollHeight
+
+  .navbar__logo
+    >.logo>span
+      padding-top: 0
 
 @media (max-width: $widthLaptopB)
   .navbar__menu
