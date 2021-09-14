@@ -24,6 +24,19 @@
     transform: translate3d(0, 0, 0)
 
 
+.animate__fadeInUpMedium
+  animation-name: fadeInUpMedium
+
+@keyframes fadeInUpMedium
+  from
+    opacity: 0
+    transform: translate3d(0, 50%, 0)
+
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+
 .animate__fadeInDownShort
   animation-name: fadeInDownShort
 
@@ -50,6 +63,19 @@
     transform: translate3d(0, 0, 0)
 
 
+.animate__fadeInDownMedium
+  animation-name: fadeInDownMedium
+
+@keyframes fadeInDownMedium
+  from
+    opacity: 0
+    transform: translate3d(0, -50%, 0)
+
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+
 .animate__fadeInRightShort
   animation-name: fadeInRightShort
 
@@ -68,7 +94,7 @@
 @keyframes fadeInLeftShort
   from
     opacity: 0
-    transform: translate3d(-50%, 0, 0)
+    transform: translate3d(-30%, 0, 0)
   to
     opacity: 1
     transform: translate3d(0, 0, 0)
@@ -81,6 +107,18 @@
   from
     opacity: 0
     transform: scale3d(0.8, 0.8, 0.8)
+
+  50%
+    opacity: 1
+
+
+.animate__zoomInSmall
+  animation-name: zoomInSmall
+
+@keyframes zoomInSmall
+  from
+    opacity: 0
+    transform: scale3d(0.6, 0.6, 0.6)
 
   50%
     opacity: 1

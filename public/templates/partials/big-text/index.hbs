@@ -1,3 +1,3 @@
-<h3 class="big-text {{#if size}}big-text_{{size}}{{/if}} wow animate__fadeInLeft" data-wow-duration="1s">
+<h3 class="big-text {{#if size}}big-text_{{size}}{{/if}} wow {{#if animate}}{{animate}}{{else}}animate__fadeInLeftShort{{/if}}" {{#if delay}}data-wow-delay="{{delay}}"{{/if}} data-wow-duration="1s">
     {{> @partial-block }}
 </h3>

@@ -1,19 +1,23 @@
 <div class="tool" id="{{anchor}}">
     <div class="tool__content">
-        {{> tag-block/index text=tagText color=tagColor}}
+        <div class="wow animate__fadeInDownSmall" data-wow-duration="1s">
+            {{> tag-block/index text=tagText color=tagColor animate=" "}}
+            {{> space/index height=24 }}
+            {{#> big-text/index size="small" animate=" "}}
+                {{bigText}}
+            {{/big-text/index}}
+        </div>
         {{> space/index height=24 }}
-        {{#> big-text/index size="small"}}
-            {{bigText}}
-        {{/big-text/index}}
-        {{> space/index height=24 }}
-        {{#> accent-text/index }}
+        {{#> accent-text/index animate="animate__fadeInDownSmall"}}
             {{{accentText}}}
         {{/accent-text/index}}
-        {{> space/index height=24 }}
-        {{> main-button/index text=buttonText url=buttonURL openWindowID=buttonOpenWindowID }}
+        <div >
+            {{> space/index height=24 }}
+            {{> main-button/index text=buttonText url=buttonURL openWindowID=buttonOpenWindowID animate="animate__fadeInDownMedium"}}
+        </div>
     </div>
     <div class="tool__img" {{#if right}}style="right: {{right}}"{{/if}}>
-        <img src="{{image}}" alt="" class="wow animate__fadeInRight" data-wow-duration="1s">
+        <img src="{{image}}" alt="" class="wow animate__zoomInShort" data-wow-duration="1s">
         {{{@partial-block}}}
     </div>
 </div>
