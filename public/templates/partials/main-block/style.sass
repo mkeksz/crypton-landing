@@ -2,13 +2,41 @@
   height: 827px
   display: flex
   place-items: center
+.main-block__img
+  width: 975px
+  height: 854px
+  position: absolute
+  right: 0
+  top: 10px
+  z-index: 0
   >img
-    width: 975.23px
-    height: 854.23px
+    max-width: 100%
+    max-height: 100%
+  &-1
     position: absolute
-    right: 0
     top: 0
-    z-index: 0
+    left: 140px
+    z-index: 5
+  &-2
+    position: absolute
+    top: 390px
+    left: 130px
+    z-index: 6
+  &-3
+    position: absolute
+    top: 130px
+    left: 660px
+    z-index: 4
+  &-4
+    position: absolute
+    top: 590px
+    left: 740px
+    z-index: 3
+  &-5
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
 
 .main-block__tg
   position: absolute
@@ -44,37 +72,37 @@
   z-index: 1
 
 @media (max-width: $widthLaptopB)
-  .main-block
-    >img
-      right: -60px
+  .main-block__img
+    right: -60px
 
 @media (max-width: $widthLaptopL)
   .main-block
     height: 790px
-    >img
-      width: 900px
-      height: 788px
-      top: 35px
-      right: -100px
+  .main-block__img
+    width: 900px
+    height: 788px
+    top: 35px
+    right: -100px
   .main-block__tg
     margin-top: 200px
 
 @media (max-width: $widthLaptopM)
-  .main-block
-    >img
-      width: 800px
-      height: 701px
-      top: 60px
-      right: -130px
+  .main-block__img
+    width: 800px
+    height: 701px
+    top: 70px
+    right: -130px
 
 @media (max-width: $widthTabletL)
   .main-block
     height: 700px
-    >img
-      width: 700px
-      height: 613px
-      top: 60px
-      right: -150px
+  .main-block__img
+    width: 700px
+    height: 613px
+    top: 80px
+    right: -150px
+    &-2
+      top: 290px
   .main-block__tg
     right: 10px
     margin-top: 250px
@@ -82,33 +110,52 @@
 @media (max-width: $widthTabletM)
   .main-block
     height: 630px
-    >img
-      top: 40px
-      right: -230px
+  .main-block__img
+    top: 40px
+    right: -230px
+    &-1
+      top: 50px
+      width: 400px
+    //&-2
+    //  left: 150px
+    //&-3
+    //  left: 215px
+    //  top: 50px
+    //&-4
+    //  left: 0
+    //  top: 300px
 
 @media (max-width: $widthTabletS)
-  .main-block
-    >img
-      right: -275px
+  .main-block__img
+    right: -275px
 
 @media (max-width: $widthMobileB)
-  .main-block
-    >img
-      right: -335px
+  .main-block__img
+    right: -335px
+    &-1
+      left: 122px
+      width: 300px
+    &-2
+      left: 90px
+      width: 200px
+    &-5
+      left: 50px
+      width: 150px
+
   .main-block__tg
     margin-top: 400px
 
 @media (max-width: $widthMobileL)
-  .main-block
-    >img
-      top: 30px
-      right: -385px
+  .main-block__img
+    top: 30px
+    right: -385px
 
 @media (max-width: $widthMobileM)
-  .main-block
-    >img
-      top: 20px
-      right: -415px
+  .main-block__img
+    top: 20px
+    right: -415px
+    &-2
+      left: 120px
   .main-block__tg
     right: 10px
     left: 10px
