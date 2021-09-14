@@ -14,7 +14,7 @@
     {{#> wrapper/index}}
         {{> tools-block/index}}
     {{/wrapper/index}}
-    {{> form/index}}
+    {{> form/index buttonNotAnimate=true}}
     {{#> wrapper/index}}
         {{> reviews/index}}
     {{/wrapper/index}}
@@ -27,7 +27,7 @@
     {{> footer/index}}
 
     {{#> window/index windowID="form" backgroundColor="#f7f7fa"}}
-        {{> form/index inWindow=true}}
+        {{> form/index inWindow=true buttonNotAnimate=true}}
     {{/window/index}}
     {{#> window/index windowID="calendar" tag="Календарь" tagColor="#DD0D18"}}
         {{#> window-tool/index tag="календарь" tagColor="#DD0D18" image="../images/tool-1-1.png" text="Мы собираем и отображаем в календаре все события криптосферы. Настройте уведомления и наслаждайтесь свободным временем."}}

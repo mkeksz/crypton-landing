@@ -1,5 +1,6 @@
 .main-block
-  height: 827px
+  height: 100vh
+  min-height: 827px
   display: flex
   place-items: center
 .main-block__img
@@ -7,7 +8,7 @@
   height: 854px
   position: absolute
   right: 0
-  top: 10px
+  margin-top: 50px
   z-index: 0
   >img
     max-width: 100%
@@ -77,11 +78,11 @@
 
 @media (max-width: $widthLaptopL)
   .main-block
-    height: 790px
+    min-height: 790px
   .main-block__img
     width: 900px
     height: 788px
-    top: 35px
+    margin-top: 0
     right: -100px
   .main-block__tg
     margin-top: 200px
@@ -90,16 +91,14 @@
   .main-block__img
     width: 800px
     height: 701px
-    top: 70px
     right: -130px
 
 @media (max-width: $widthTabletL)
   .main-block
-    height: 700px
+    min-height: 700px
   .main-block__img
     width: 700px
     height: 613px
-    top: 80px
     right: -150px
     &-2
       top: 290px
@@ -109,21 +108,12 @@
 
 @media (max-width: $widthTabletM)
   .main-block
-    height: 630px
+    min-height: 630px
   .main-block__img
-    top: 40px
     right: -230px
     &-1
       top: 50px
       width: 400px
-    //&-2
-    //  left: 150px
-    //&-3
-    //  left: 215px
-    //  top: 50px
-    //&-4
-    //  left: 0
-    //  top: 300px
 
 @media (max-width: $widthTabletS)
   .main-block__img
@@ -131,6 +121,7 @@
 
 @media (max-width: $widthMobileB)
   .main-block__img
+    margin-top: 200px
     right: -335px
     &-1
       left: 122px
@@ -147,12 +138,10 @@
 
 @media (max-width: $widthMobileL)
   .main-block__img
-    top: 30px
     right: -385px
 
 @media (max-width: $widthMobileM)
   .main-block__img
-    top: 20px
     right: -415px
     &-2
       left: 120px

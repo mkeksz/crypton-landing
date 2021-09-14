@@ -1,8 +1,8 @@
 {{#if url }}
     <a
         {{#if fontSize}}style="font-size: {{fontSize}}px"{{/if}}
-        class="main-button {{#if isBlack}}main-button_black{{/if}} {{#if fullWidth}}main-button_full-width{{/if}} {{#if notAnimate}}{{else}}wow animate__fadeIn{{/if}}"
-        data-wow-duration="1.5s" href="{{url}}"
+        class="main-button {{#if isBlack}}main-button_black{{/if}} {{#if fullWidth}}main-button_full-width{{/if}} {{#if notAnimate}}{{else}}wow animate__animated animate__fadeInLeft{{/if}}"
+        data-wow-duration="1s" data-wow-delay="0.2s" href="{{url}}"
         {{#if openWindowID}}
             data-open-window="{{openWindowID}}"
         {{/if}}
@@ -15,8 +15,8 @@
 {{else}}
     <button
         {{#if fontSize}}style="font-size: {{fontSize}}px"{{/if}}
-        class="main-button {{#if isBlack}}main-button_black{{/if}} {{#if fullWidth}}main-button_full-width{{/if}} {{#if notAnimate}}{{else}}wow animate__fadeIn{{/if}}"
-        data-wow-duration="1.5s"
+        class="main-button {{#if isBlack}}main-button_black{{/if}} {{#if fullWidth}}main-button_full-width{{/if}} {{#if notAnimate}}{{else}}wow animate__animated animate__fadeInLeft{{/if}}"
+        data-wow-duration="1s" data-wow-delay="0.2s"
         {{#if isSubmit}}type="submit"{{/if}}
         {{#if openWindowID}}
             data-open-window="{{openWindowID}}"
