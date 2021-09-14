@@ -1,7 +1,12 @@
 .window-tool
   width: 100%
+  display: flex
+  place-content: space-between
+  place-items: flex-end
 
 .window-tool__content
+  padding-bottom: 60px
+  padding-right: 10px
   >div
     max-width: 428px
     >b
@@ -16,73 +21,36 @@
       line-height: 130%
 
 .window-tool__img
-  position: absolute
-  right: -160px
-  top: 0
-  bottom: 0
+  position: relative
   display: flex
   place-items: center
-  z-index: -1
-  padding-right: 15px
+  >img
+    max-width: 550px
+    max-height: 550px
   .glass-block
     visibility: visible !important
-
-@media (max-height: 760px)
-  .window-tool__img
-    >img
-      transform: scale(.8)
-
-@media (max-height: 630px)
-  .window-tool__img
-    >img
-      transform: scale(.6)
-    >div
-      transform: scale(.8)
+    box-shadow: 0 32px 40px rgba(0, 0, 0, .1)
 
 @media (max-width: $widthLaptopL)
   .window-tool__img
-    right: -200px
     >img
-      transform: scale(.6)
+      max-width: 450px
+      max-height: 450px
     >div
       transform: scale(.8)
 
 @media (max-width: $widthLaptopM)
-  .window-tool
-    display: flex
-    flex-direction: column
-    place-items: center
-    margin-top: 60px
-
-  .window-tool__img
-    max-height: 550px
-    position: relative
-    right: unset
-    top: unset
-    bottom: unset
-    padding-right: 0
-    margin-top: 100px
-    >img
-      transform: unset !important
-      max-width: 100%
-    >div
-      transform: unset !important
-
-@media (max-width: $widthMobileL)
-  .window-tool__content
-    >div
-      >p
-        font-size: 22px
-
-@media (max-width: $widthMobileM)
-  .window-tool
-    margin-top: 20px
-
   .window-tool__content
     >div
       >p
         font-size: 20px
 
+@media (max-width: $widthTabletL)
+  .window-tool
+    flex-direction: column
+    place-items: center
+
+@media (max-width: $widthMobileB)
   .window-tool__img
     >img
-      max-width: calc(100% - 20px)
+      width: 100%

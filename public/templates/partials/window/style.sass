@@ -16,7 +16,6 @@
 
 .window__container
   overflow-y: auto
-  overflow-x: hidden
   height: 100%
   display: grid
   grid-template-rows: 55px auto
@@ -43,7 +42,11 @@
     height: 28px
 
 .window__content
-  padding: 15px 0 40px
+  padding: 15px 0 20px
   display: flex
   place-content: center
   place-items: center
+
+@media (max-width: $widthTabletL)
+  .window__tag
+    display: none

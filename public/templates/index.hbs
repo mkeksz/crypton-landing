@@ -30,7 +30,7 @@
         {{> form/index inWindow=true}}
     {{/window/index}}
     {{#> window/index windowID="calendar" tag="Календарь" tagColor="#DD0D18"}}
-        {{#> window-tool/index tag="календарь" tagColor="#DD0D18" image="../images/tool-1.png" text="Мы собираем и отображаем в календаре все события криптосферы. Настройте уведомления и наслаждайтесь свободным временем."}}
+        {{#> window-tool/index tag="календарь" tagColor="#DD0D18" image="../images/tool-1-1.png" text="Мы собираем и отображаем в календаре все события криптосферы. Настройте уведомления и наслаждайтесь свободным временем."}}
             {{> tool-glasses-calendar/index }}
         {{/window-tool/index}}
     {{/window/index}}
@@ -40,13 +40,19 @@
         {{/window-tool/index}}
     {{/window/index}}
     {{#> window/index windowID="channel" tag="Канал" tagColor="#30B3EB"}}
-        test
+        {{#> window-tool/index tag="Канал" tagColor="#30B3EB" image="../images/tool-4.png" text="Перспективные и интересные проекты в мире DeFI, токен сейлы, NFT, выгодные фарминги и стейкинги."}}
+            {{> tool-glasses-channel/index }}
+        {{/window-tool/index}}
     {{/window/index}}
     {{#> window/index windowID="book" tag="База знаний" tagColor="#F3BA2F"}}
-        test
+        {{#> window-tool/index tag="База знаний" tagColor="#F3BA2F" image="../images/tool-5.png" text="Криптовалюты, блокчейны, туториалы и гайды, биржи, инструкции по DeFi проектам."}}
+            {{> tool-glasses-book/index }}
+        {{/window-tool/index}}
     {{/window/index}}
     {{#> window/index windowID="invest" tag="Инвест фонд" tagColor="#7553ED"}}
-        test
+        {{#> window-tool/index tag="Инвест фонд" tagColor="#7553ED" image="../images/tool-6.png" text="10% от вашей оплаты идет в инвест фонд и закрепляется лично за вами."}}
+            {{> tool-glasses-invest/index }}
+        {{/window-tool/index}}
     {{/window/index}}
 </body>
 </html>
