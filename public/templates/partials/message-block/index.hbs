@@ -1,4 +1,4 @@
-<div class="message-block {{#if isRight}}message-block_right{{else}}message-block_left{{/if}}">
+<div class="message-block {{#if isRight}}message-block_right{{else}}message-block_left{{/if}}" style="{{#if min-height}}min-height: {{min-height}}px;{{/if}}">
     {{#if emoji}}
         <div class="message-block__emoji"><img src="{{emoji}}" alt=""></div>
     {{/if}}
