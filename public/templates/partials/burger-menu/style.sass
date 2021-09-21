@@ -1,0 +1,73 @@
+.burger-menu
+  visibility: hidden
+  pointer-events: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 9999
+  transition: visibility .3s
+  &.show
+    visibility: visible
+    pointer-events: unset
+    .burger-menu__overlay
+      opacity: 1
+    .burger-menu__content
+      right: 0
+
+.burger-menu__overlay
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(0,0,0,.3)
+  opacity: 0
+  transition: opacity .3s
+
+.burger-menu__content
+  min-width: 250px
+  position: absolute
+  top: 0
+  right: -100%
+  bottom: 0
+  transition: right .3s
+  background-color: #fff
+  box-shadow: 0 32px 134px rgba(0, 0, 0, .16)
+  >ul
+    height: 100%
+    display: flex
+    flex-direction: column
+    place-items: center
+    place-content: center
+    padding: 0 20px
+    >li
+      margin-top: 10px
+      &:first-child
+        margin-top: 0
+      >a
+        font-size: 17px
+        transition: opacity .2s
+        &:hover
+          opacity: .8
+
+.burger-menu__close
+  position: absolute
+  right: 10px
+  top: 10px
+  display: flex
+  width: 24px
+  height: 24px
+  place-content: center
+  place-items: center
+  >span
+    height: 3px
+    width: 24px
+    position: absolute
+    background-color: rgb(225, 225, 225)
+    border-radius: 10px
+    &:last-child
+      transform: rotate(45deg)
+    &:first-child
+      transform: rotate(-45deg)

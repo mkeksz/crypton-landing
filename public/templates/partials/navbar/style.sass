@@ -50,6 +50,27 @@ $scrollHeight: 43px
       margin-right: 24px
       &:last-child
         margin-right: 0
+      &.navbar__burger
+        display: none
+        >div
+          cursor: pointer
+          width: 24px
+          display: flex
+          place-items: flex-end
+          flex-direction: column
+          >span
+            display: block
+            height: 4px
+            margin-top: 3px
+            border-radius: 10px
+            background-color: $colorMain
+            &:first-child
+              margin-top: 0
+              width: 100%
+            &:nth-child(2)
+              width: 100%
+            &:last-child
+              width: 100%
 
 .navbar__button
   >div
@@ -97,3 +118,7 @@ $scrollHeight: 43px
     >ul
       >.navbar__link
         display: none
+      >li.navbar__burger
+        display: inline-flex
+      >li.navbar__button
+        margin-right: 35px

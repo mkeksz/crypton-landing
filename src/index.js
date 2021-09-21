@@ -9,6 +9,7 @@ window.$ = $
 
 new WOW({animateClass: 'animated'}).init()
 windowsHandler()
+burgerHandler()
 
 
 function windowsHandler() {
@@ -49,5 +50,25 @@ function windowsHandler() {
         for (const window of windows) {
             window.classList.remove('show')
         }
+    }
+}
+
+function burgerHandler() {
+    const burger = document.body.querySelector('.burger-menu')
+    const buttonsOpen = document.body.querySelectorAll('[data-open-burger]')
+    const buttonsClose = document.body.querySelectorAll('[data-close-burger]')
+
+    for (const button of buttonsOpen) {
+        button.addEventListener('click', () => {
+            burger.classList.add('show')
+            document.body.style.overflow = 'hidden'
+        })
+    }
+
+    for (const button of buttonsClose) {
+        button.addEventListener('click', () => {
+            burger.classList.remove('show')
+            document.body.style.overflow = ''
+        })
     }
 }
