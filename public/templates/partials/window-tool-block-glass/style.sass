@@ -1,0 +1,28 @@
+.window-tool-block-glass
+  width: 100%
+  height: 100%
+  position: absolute
+  display: flex
+  place-items: center
+  place-content: center
+  top: 0
+  left: 0
+  >div, >div>.glass-block
+    max-width: 220px
+    min-height: 220px
+  .glass-block
+    box-shadow: 0 32px 70px rgba(0, 0, 0, .16)
+
+.window-tool-block-glass__content
+  font-size: 17px
+  line-height: 140%
+  >ul
+    list-style: disc outside
+    padding-left: 20px
+  >span
+    display: block
+    color: #008cff
+
+@media (max-width: $widthMobileB)
+  .window-tool-block-glass
+    transform: scale(.7)

@@ -1,0 +1,14 @@
+<div class="window-tool-block {{#if isRight}}window-tool-block_right{{/if}}" style="{{#if mt}}margin-top: {{mt}}px;{{/if}}{{#if mb}}margin-bottom: {{mb}}px;{{/if}}">
+    <div class="window-tool-block__img">
+        <img src="{{image}}" alt="">
+        {{#if withoutGlass}}
+        {{else}}
+            {{#> window-tool-block-glass/index mr=mr-g mt=mt-g}}
+                {{{@partial-block}}}
+            {{/window-tool-block-glass/index}}
+        {{/if}}
+    </div>
+    <div class="window-tool-block__text">
+        <p style="max-width: {{mw-text}}px;{{#if fz}}font-size: {{fz}}px;{{/if}}">{{text}}</p>
+    </div>
+</div>

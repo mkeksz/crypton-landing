@@ -21,13 +21,25 @@
   grid-template-rows: 55px auto
 
 .window__panel
+  height: 55px
+  >div
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 3
+    background: rgba(255, 255, 255, .72)
+    backdrop-filter: blur(20px)
+    padding-bottom: 10px
+  &-left
+    display: flex
+    place-items: center
+
+.window__panel-content
   display: flex
   place-content: space-between
   place-items: center
   padding-top: 17px
-  &-left
-    display: flex
-    place-items: center
 
 .window__tag
   margin-left: 10px
@@ -43,9 +55,11 @@
 
 .window__content
   padding: 15px 0 20px
-  display: flex
-  place-content: center
-  place-items: center
+  &-wrap
+    height: 100%
+    display: flex
+    place-content: center
+    place-items: center
 
 @media (max-width: $widthTabletL)
   .window__tag

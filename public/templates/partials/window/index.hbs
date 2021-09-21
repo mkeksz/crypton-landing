@@ -1,24 +1,35 @@
 <div class="window" data-window-id="{{windowID}}" {{#if backgroundColor}}style="background-color: {{backgroundColor}}" {{/if}}>
-    {{#> wrapper/index fullHeight=true}}
-        <div class="window__container">
+    <div class="window__container">
             <div class="window__panel">
-                <div class="window__panel-left">
-                    <div class="window__logo">
-                        {{> logo/index}}
-                    </div>
-                    <div class="window__tag" {{#if tagColor}}style="color: {{tagColor}}"{{/if}}>
-                        {{tag}}
-                    </div>
-                </div>
-                <div class="window__close">
-                    <div class="window__close-button">
-                        {{> main-button/index fontSize=13 isBlack=true notAnimate=true text="Закрыть" closeWindowID=windowID}}
-                    </div>
+                <div style="{{#if backgroundColor}}background-color: {{backgroundColor}}{{/if}}">
+                    {{#> wrapper/index}}
+                        <div class="window__panel-content">
+                            <div class="window__panel-left">
+                                <div class="window__logo">
+                                    {{> logo/index}}
+                                </div>
+                                <div class="window__tag" {{#if tagColor}}style="color: {{tagColor}}"{{/if}}>
+                                    {{tag}}
+                                </div>
+                            </div>
+                            <div class="window__close">
+                                <div class="window__close-button">
+                                    {{> main-button/index fontSize=13 isBlack=true notAnimate=true text="Закрыть" closeWindowID=windowID}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/wrapper/index}}
                 </div>
             </div>
-            <div class="window__content">
-                {{{@partial-block}}}
-            </div>
+        <div class="window__content" style="{{#if footer}}padding-bottom: 0;{{/if}}{{#if center}}display: flex;place-content: center;place-items: center;{{/if}}">
+            {{#> wrapper/index fullHeight=fh}}
+                <div class="window__content-wrap">
+                    {{{@partial-block}}}
+                </div>
+            {{/wrapper/index}}
+            {{#if footer}}
+                {{> window-tool-block-footer/index}}
+            {{/if}}
         </div>
-    {{/wrapper/index}}
+    </div>
 </div>

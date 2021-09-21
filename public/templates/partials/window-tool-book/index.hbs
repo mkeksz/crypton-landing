@@ -1,0 +1,40 @@
+<div class="window-tool">
+    <div class="window-tool__block-main">
+        <div class="window-tool__content">
+            <div>
+                <b style="color: {{tagColor}}">{{tag}}</b>
+                <p>{{text}}</p>
+            </div>
+        </div>
+        <div class="window-tool__img">
+            <img src="{{image}}" alt="">
+            {{{@partial-block}}}
+        </div>
+    </div>
+    {{> window-tool-block/index
+            image="../../../images/tool-block-10.png"
+            text="1. Изучайте различные криптовалюты и блокчейны, понимание внутреннего наполнения проекта дает вам отличную базу для анализа других монет!"
+            mw-text=327
+            mt=1
+            fz=20
+            withoutGlass=true
+    }}
+    {{> window-tool-block/index
+            image="../../../images/tool-block-11.png"
+            text="2. Читайте подробные туториалы по биржам, кошелькам и DeFi проектам, которые вам интересны. Изучайте как они работают и применяйте эти знания на все 100% во время своей рабочей деятельности."
+            isRight=true
+            mw-text=327
+            mt=1
+            fz=20
+            withoutGlass=true
+    }}
+    {{> window-tool-block/index
+            image="../../../images/tool-block-12.png"
+            text="3. Прокачивайте свои знания в блокчейн технологиях, изучайте как работают DeFi приложения, это даст вам более глубокое понимание технологий, с которыми вы работаете, следственно, улучшит вашу оценку и понимание любого проекта!"
+            mw-text=327
+            mt=1
+            mb=100
+            fz=20
+            withoutGlass=true
+    }}
+</div>

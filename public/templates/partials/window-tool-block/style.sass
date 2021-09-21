@@ -1,0 +1,45 @@
+.window-tool-block
+  margin-top: 100px
+  display: grid
+  grid-template-columns: auto auto
+  grid-gap: 80px
+  place-items: center
+  grid-template-areas: 'i t'
+  &_right
+    grid-template-areas: 't i'
+
+.window-tool-block__img
+  grid-area: i
+  position: relative
+  display: flex
+  >img
+    max-width: 635px
+
+
+.window-tool-block__text
+  grid-area: t
+  >p
+    font-size: 22px
+    line-height: 160%
+
+@media (max-width: $widthLaptopB)
+  .window-tool-block__img
+    >img
+      max-width: 500px
+
+@media (max-width: $widthLaptopM)
+  .window-tool-block__img
+    >img
+      max-width: 400px
+
+@media (max-width: $widthTabletL)
+  .window-tool-block
+    grid-template-columns: 1fr
+    grid-template-areas: 't' 'i'
+    grid-gap: 15px
+    padding-top: 150px
+
+@media (max-width: $widthMobileL)
+  .window-tool-block__img
+    >img
+      max-width: 100%

@@ -1,12 +1,14 @@
 <div class="window-tool">
-    <div class="window-tool__content">
-        <div>
-            <b style="color: {{tagColor}}">{{tag}}</b>
-            <p>{{text}}</p>
+    <div class="window-tool__block-main">
+        <div class="window-tool__content">
+            <div>
+                <b style="color: {{tagColor}}">{{tag}}</b>
+                <p>{{text}}</p>
+            </div>
         </div>
-    </div>
-    <div class="window-tool__img">
-        <img src="{{image}}" alt="">
-        {{{@partial-block}}}
+        <div class="window-tool__img">
+            <img src="{{image}}" alt="">
+            {{{@partial-block}}}
+        </div>
     </div>
 </div>

@@ -26,33 +26,33 @@
     {{/wrapper/index}}
     {{> footer/index}}
 
-    {{#> window/index windowID="form" backgroundColor="#f7f7fa"}}
+    {{#> window/index windowID="form" backgroundColor="#f7f7fa" fh=true}}
         {{> form/index inWindow=true buttonNotAnimate=true}}
     {{/window/index}}
-    {{#> window/index windowID="calendar" tag="Календарь" tagColor="#DD0D18"}}
-        {{#> window-tool/index tag="календарь" tagColor="#DD0D18" image="../images/tool-1-1.png" text="Мы собираем и отображаем в календаре все события криптосферы. Настройте уведомления и наслаждайтесь свободным временем."}}
+    {{#> window/index windowID="calendar" tag="Календарь" tagColor="#DD0D18" footer=true}}
+        {{#> window-tool-calendar/index tag="календарь" tagColor="#DD0D18" image="../images/tool-1-1.png" text="Мы собираем и отображаем в календаре все события криптосферы. Настройте уведомления и наслаждайтесь свободным временем."}}
             {{> tool-glasses-calendar/index }}
-        {{/window-tool/index}}
+        {{/window-tool-calendar/index}}
     {{/window/index}}
-    {{#> window/index windowID="chat" tag="Чат" tagColor="#53DE5D"}}
-        {{#> window-tool/index tag="чат" tagColor="#53DE5D" image="../images/tool-3.png" text="Общайтесь с более чем 650 человек единомышленников. За свою активность вы можете попасть в команду Crypton и получить полноценную работу мечты."}}
+    {{#> window/index windowID="chat" tag="Чат" tagColor="#53DE5D" footer=true}}
+        {{#> window-tool-chat/index tag="чат" tagColor="#53DE5D" image="../images/tool-3.png" text="Общайтесь с более чем 650 человек единомышленников. За свою активность вы можете попасть в команду Crypton и получить полноценную работу мечты."}}
             {{> tool-glasses-chat/index }}
-        {{/window-tool/index}}
+        {{/window-tool-chat/index}}
     {{/window/index}}
-    {{#> window/index windowID="channel" tag="Канал" tagColor="#30B3EB"}}
-        {{#> window-tool/index tag="Канал" tagColor="#30B3EB" image="../images/tool-4.png" text="Перспективные и интересные проекты в мире DeFI, токен сейлы, NFT, выгодные фарминги и стейкинги."}}
+    {{#> window/index windowID="channel" tag="Канал" tagColor="#30B3EB" footer=true}}
+        {{#> window-tool-channel/index tag="Канал" tagColor="#30B3EB" image="../images/tool-4.png" text="Перспективные и интересные проекты в мире DeFI, токен сейлы, NFT, выгодные фарминги и стейкинги."}}
             {{> tool-glasses-channel/index }}
-        {{/window-tool/index}}
+        {{/window-tool-channel/index}}
     {{/window/index}}
-    {{#> window/index windowID="book" tag="База знаний" tagColor="#F3BA2F"}}
-        {{#> window-tool/index tag="База знаний" tagColor="#F3BA2F" image="../images/tool-5.png" text="Криптовалюты, блокчейны, туториалы и гайды, биржи, инструкции по DeFi проектам."}}
+    {{#> window/index windowID="book" tag="База знаний" tagColor="#F3BA2F" footer=true}}
+        {{#> window-tool-book/index tag="База знаний" tagColor="#F3BA2F" image="../images/tool-5.png" text="Криптовалюты, блокчейны, туториалы и гайды, биржи, инструкции по DeFi проектам."}}
             {{> tool-glasses-book/index }}
-        {{/window-tool/index}}
+        {{/window-tool-book/index}}
     {{/window/index}}
-    {{#> window/index windowID="invest" tag="Инвест фонд" tagColor="#7553ED"}}
-        {{#> window-tool/index tag="Инвест фонд" tagColor="#7553ED" image="../images/tool-6.png" text="10% от вашей оплаты идет в инвест фонд и закрепляется лично за вами."}}
+    {{#> window/index windowID="invest" tag="Инвест фонд" tagColor="#7553ED" footer=true}}
+        {{#> window-tool-invest/index tag="Инвест фонд" tagColor="#7553ED" image="../images/tool-6.png" text="10% от вашей оплаты идет в инвест фонд и закрепляется лично за вами."}}
             {{> tool-glasses-invest/index }}
-        {{/window-tool/index}}
+        {{/window-tool-invest/index}}
     {{/window/index}}
 </body>
 </html>

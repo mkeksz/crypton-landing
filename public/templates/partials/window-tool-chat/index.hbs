@@ -1,0 +1,43 @@
+<div class="window-tool">
+    <div class="window-tool__block-main">
+        <div class="window-tool__content">
+            <div>
+                <b style="color: {{tagColor}}">{{tag}}</b>
+                <p>{{text}}</p>
+            </div>
+        </div>
+        <div class="window-tool__img">
+            <img src="{{image}}" alt="">
+            {{{@partial-block}}}
+        </div>
+    </div>
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-5.png"
+            text="Мы даем возможность не только научиться, но и найти работу мечты. Будучи активным участником чата, у вас есть возможность попасть в команду Crypton Товарищей. Это команда инициативных ребят, кто готов безвозмездно помогать команде Crypton развивать комьюнити и помогать во всех аспектах работы Crypton Academy."
+            mw-text=327
+            mr-g=-250
+            mt-g=-150
+            mt=1
+            fz=20
+    }}
+        <p>
+            Добрый день! Мы заметили вашу поддержку в пользу других участников. Желаете стать частью Crypton Товарищей?
+        </p>
+        <img src="../../../images/icon-emoji-1.png" alt="">
+    {{/window-tool-block/index}}
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-6.png"
+            text="Лучшие Crypton Товарищи могут быть приглашены в основную команду компании Crypton для полноценной работы в команде единомышленников."
+            isRight=true
+            mw-text=327
+            mr-g=-290
+            mt-g=-50
+            mt=50
+            mb=100
+            fz=20
+    }}
+        <img src="../../../images/icon-emoji-2.png" alt="">
+        <p>Ку! Ну что, мы вынуждены сделать тебе оффер на Full-тайм с окладом...</p>
+        <span>Читать подробнее</span>
+    {{/window-tool-block/index}}
+</div>

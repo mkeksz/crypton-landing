@@ -1,0 +1,45 @@
+<div class="window-tool">
+    <div class="window-tool__block-main">
+        <div class="window-tool__content">
+            <div>
+                <b style="color: {{tagColor}}">{{tag}}</b>
+                <p>{{text}}</p>
+            </div>
+        </div>
+        <div class="window-tool__img">
+            <img src="{{image}}" alt="">
+            {{{@partial-block}}}
+        </div>
+    </div>
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-7.png"
+            text="1. Разбор и аналитика перспективных проектов и токенов. Команда Crypton каждый день анализирует весь криптовалютный рынок и тщательно отбирает проекты, о которых стоит рассказать аудитории Crypton Academy."
+            mw-text=327
+            mr-g=-250
+            mt-g=-150
+            mt=1
+            fz=20
+    }}
+        <b>
+            Проект только появился на свет, а его капитализация уже несколько миллиардов долларов! Закупаем по полной пока не ...
+        </b>
+        <span>Читать полностью</span>
+    {{/window-tool-block/index}}
+    {{> window-tool-block/index
+            image="../../../images/tool-block-8.png"
+            text="2. Публикации лучших NFT сейлов и токен сейлов. За счет большого опыта команды Crypton в этой сфере, мы выбираем самые перспективные сейлы, которые с большой вероятностью могут принести прибыль. К каждому событию готовится подробный разбор, описание и инструкция, как принять участие!"
+            isRight=true
+            mw-text=327
+            mt=100
+            fz=20
+            withoutGlass=true
+    }}
+    {{> window-tool-block/index
+            image="../../../images/tool-block-9.png"
+            text="3. Публикации самых выгодных и безопасных и пулов и фармингов для доходного фермерства."
+            mw-text=327
+            mt=1
+            fz=20
+            withoutGlass=true
+    }}
+</div>

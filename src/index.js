@@ -21,6 +21,7 @@ function windowsHandler() {
             const targetWindowID = button.getAttribute('data-open-window')
             const window = getWindowByID(targetWindowID)
             if (!window) return
+            closeAllWindows()
             window.classList.add('show')
             document.body.style.overflow = 'hidden'
         })
@@ -41,6 +42,12 @@ function windowsHandler() {
             const windowID = window.getAttribute('data-window-id')
             if (!windowID || windowID !== id) continue
             return window
+        }
+    }
+
+    function closeAllWindows() {
+        for (const window of windows) {
+            window.classList.remove('show')
         }
     }
 }

@@ -1,0 +1,66 @@
+<div class="window-tool">
+    <div class="window-tool__block-main">
+        <div class="window-tool__content">
+            <div>
+                <b style="color: {{tagColor}}">{{tag}}</b>
+                <p>{{text}}</p>
+            </div>
+        </div>
+        <div class="window-tool__img">
+            <img src="{{image}}" alt="">
+            {{{@partial-block}}}
+        </div>
+    </div>
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-1.png"
+            text="1. Выберите разделы и конкретные площадки в которых вы хотите принимать участие, настройте периодичность напоминаний под себя!"
+            mw-text=245
+            mr-g=110
+            mt-g=150
+            mt=1
+    }}
+        <ul>
+            <li>Появление новых токенов, уведомление 1 раз в день</li>
+        </ul>
+        <span style="margin-top: 30px">+ Добавить</span>
+    {{/window-tool-block/index}}
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-2.png"
+            text="2. Получайте новости о новых событиях из разделов с полным описанием и инструкцией как принять участие."
+            isRight=true
+            mw-text=242
+            mr-g=-240
+            mt-g=-180
+    }}
+        <b>Продажа токенов началась!</b>
+        <p style="margin-top: 50px">
+            1. Заходите на сайт www.uniswap.org
+            <br>
+            2. Открываете ссылку...
+        </p>
+        <span>Читать полностью</span>
+    {{/window-tool-block/index}}
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-3.png"
+            text="3. Бот будет напоминать о каждом шаге и действии события, от старта вплоть до его окончания."
+            mw-text=242
+            mr-g=-300
+            mt-g=0
+            mt=1
+    }}
+        <b>Уведомление:</b>
+        <p style="margin-top: 20px">Продано 23 897 838 токенов, осталось всего 2 783 655. До окончания сейла 45 минут.</p>
+    {{/window-tool-block/index}}
+    {{#> window-tool-block/index
+            image="../../../images/tool-block-4.png"
+            text="4. При появлении форс-мажорных ситуаций, изменений дат и условий, бот своевременно вас об этом предупредит."
+            mw-text=245
+            mr-g=-240
+            mt-g=0
+            isRight=true
+            mt=1
+    }}
+        <b>Предупреждение:</b>
+        <p style="margin-top: 25px">Продажа токенов переносится на завтра. Старт в 14:00.</p>
+    {{/window-tool-block/index}}
+</div>
