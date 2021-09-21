@@ -1,15 +1,20 @@
 .window
   position: fixed
   top: 0
+  bottom: 0
+  right: 0
+  left: 0
   height: 100vh
-  width: 100vw
   background-color: #fff
+  width: 100vw
   z-index: 10000
   opacity: 0
   visibility: hidden
   transform: scale(.5)
-  transition: opacity .3s, visibility .3s, transform .3s
+  transition: opacity .3s, visibility .3s, transform .3s, width .3s
+  pointer-events: none
   &.show
+    pointer-events: unset
     visibility: visible
     opacity: 1
     transform: scale(1)

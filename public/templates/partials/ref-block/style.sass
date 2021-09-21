@@ -3,10 +3,43 @@
   display: flex
   place-content: center
 
+.ref-block__image-container
+  position: relative
+  display: flex
+  place-items: center
+  place-content: center
+
+.ref-block__glass
+  position: absolute
+  width: 220px
+  height: 220px
+  .glass-block
+    width: 220px
+    height: 220px
+    box-shadow: 0 32px 40px rgba(0, 0, 0, .1)
+  &_2
+    margin-left: 290px
+    margin-bottom: 170px
+  &_1
+    margin-right: 240px
+    margin-top: 190px
+
+.ref-block__glass-content
+  font-size: 17px
+  line-height: 140%
+  >span
+    display: block
+    margin-top: 30px
+    color: #008cff
+
 @media (max-width: $widthLaptopB)
   .ref-block__image-container
     >img
       width: 100%
+
+@media (max-width: $widthTabletM)
+  .ref-block__glass
+    transform: scale(.7)
 
 @media (max-width: $widthMobileB)
   .ref-block__image-container
@@ -15,6 +48,14 @@
     place-items: center
     >img
       width: 700px
+
+  .ref-block__glass
+    &_2
+      margin-left: 190px
+      margin-bottom: 130px
+    &_1
+      margin-right: 140px
+      margin-top: 140px
 
 @media (max-width: $widthMobileM)
   .ref-block__image-container
