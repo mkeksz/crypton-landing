@@ -1,14 +1,43 @@
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const $elem = document.querySelector('.force-block')
+        const $wrapper = $elem.querySelector('.wrapper')
+        const $weHelp = document.querySelector('.we-help-block__img')
+        document.addEventListener('scroll', () => {
+            const posTop = $elem.getBoundingClientRect().top
+
+            const offsetOrig = (posTop - window.innerHeight - 50) / 2
+            const offset = offsetOrig > 0 ? 0 : offsetOrig
+
+            const opacity = 1 + offset / 425
+            if (opacity < -1 || offsetOrig > 300) {
+                $weHelp.style.willChange = ''
+                $elem.style.willChange = ''
+            } else {
+                 $weHelp.style.willChange = 'opacity'
+                 $elem.style.willChange = 'top, height'
+             }
+
+            $weHelp.style.opacity = offset >= 0 ? 1 : (opacity < 0 ? 0 : opacity.toFixed(2))
+            if (opacity > 0) {
+                $elem.style.top = `${offset.toFixed(2)}px`
+                const height = $wrapper.offsetHeight + offset
+                $elem.style.height = `${height.toFixed(2)}px`
+            }
+        })
+    })
+</script>
 <div class="force-block">
     {{#> wrapper/index}}
         <div class="force-block__content">
-            {{> tag-block/index text="подписка crypton academy" animate="animate__fadeInUp"}}
+            {{> tag-block/index text="подписка crypton academy" notAnimate=true}}
             {{> space/index height=18 }}
-            {{#> big-text/index size="verybig" animate="animate__fadeInUp"}}
+            {{#> big-text/index size="verybig" notAnimate=true}}
                 Сила Crypton.
             {{/big-text/index}}
             {{> space/index height=25 }}
             <div class="force-block__text">
-                {{#> accent-text/index animate="animate__fadeInUpMedium"}}
+                {{#> accent-text/index notAnimate=true}}
                     <b>Компания Crypton занимается высококачественным обучением в сфере криптовалют.</b>
                     Мы создаем <a class="link" href="https://www.youtube.com/channel/UCIe1WmAFLTNkKFjJtj8XY8Q">видео-инструкции и обзоры</a> на 3-ёх языках, количество просмотров которых составляет более 1.2 миллиона.
                     На социальные сети Crypton в совокупности подписано более 110 тысяч человек.
@@ -22,8 +51,8 @@
             {{!-- <div class="right wow animate__backInUp" data-wow-duration="1s">{{> message-block/index isRight=true text="«Команда Crypton помогает нашим пользователям обращаться с DeFi инструментами, рады сотрудничеству!»" name="" tag="Binance" colorTag="#f3ba2f"}}</div> --}}
         {{/dialogue/index}}
         <div class="force-block__achievements">
-            {{> achievement/index img="../../../images/youtube.png" title="Просмотров на YouTube более" quantity="1.2М" delay="0s"}}
-            {{> achievement/index img="../../../images/soc.png" title="Подписчиков в соцсетях более" quantity="110K" delay=".15s"}}
+            {{> achievement/index imageStyle="max-width: 122px;max-height: 122px" img="../../../images/youtube.png" title="Просмотров на YouTube более" quantity="1.2М" delay="0s"}}
+            {{> achievement/index imageStyle="max-width: 207px;max-height: 133.2px" img="../../../images/soc.png" title="Подписчиков в соцсетях более" quantity="110K" delay=".15s"}}
         </div>
     {{/wrapper/index}}
 </div>
