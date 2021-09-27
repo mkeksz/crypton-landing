@@ -1,6 +1,6 @@
 <div class="window-tool-block {{#if isRight}}window-tool-block_right{{/if}}" style="{{#if mt}}margin-top: {{mt}}px;{{/if}}{{#if mb}}margin-bottom: {{mb}}px;{{/if}}">
     <div class="window-tool-block__img">
-        <img src="{{image}}" alt="">
+        <img src="{{image}}" style="{{imageStyle}}" alt="">
         {{#if withoutGlass}}
         {{else}}
             {{#> window-tool-block-glass/index mr=mr-g mt=mt-g}}
